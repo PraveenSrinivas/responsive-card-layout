@@ -1,8 +1,9 @@
-<div class="card-container">
-  <div class="card" *ngFor="let card of cardData">
-    <img class="card-image" src="https://picsum.photos/200" />
-    <div class="card-title">{{ card.name }}</div>
-    <label>Description : </label><br />
-    <div class="card-description">{{ card.description }}</div>
+<div class="page-container">
+  <div class="card-container">
+    <div class="card" *ngFor="let card of cardData">
+      <img class="card-image" src="https://picsum.photos/200" />
+      <div class="card-title">{{ card.name }}</div>
+      <div class="card-description">{{ card.description }}</div>
+    </div>
   </div>
 </div>
