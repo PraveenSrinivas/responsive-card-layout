@@ -6,4 +6,23 @@
       <div class="card-description">{{ card.description }}</div>
     </div>
   </div>
+  <br>
+  <table class="table-container">
+    <thead class="table-head">
+      <tr>
+        <th *ngFor="let name of columnNames">{{ name }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-row" *ngFor="let row of cardData">
+        <td
+          class="table-row-data"
+          [attr.data-column]="name"
+          *ngFor="let name of columnNames"
+        >
+          {{ row[name] }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>

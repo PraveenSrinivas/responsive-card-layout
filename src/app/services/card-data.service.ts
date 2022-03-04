@@ -14,4 +14,8 @@ export class CardDataService {
   getCardData(){
     return this.cardsData;
   }
+
+  getFirstNData(n:number){
+    return this.cardsData.slice(0,n);
+  }
 }
