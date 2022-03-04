@@ -10,9 +10,14 @@ export class AppComponent {
   title = 'hello-kodo-app';
   cardData : Array<any>;
   columnNames: Array<string>;
+  size = 1;
   
   constructor(private cardService: CardDataService){
-    this.cardData = this.cardService.getFirstNData(5);
+    this.cardData = this.cardService.getFirstNData(this.size);
     this.columnNames = Object.keys(this.cardData[0]);
+  }
+
+  loadData(){
+    this.cardData = this.cardService.getFirstNData(this.size);
   }
 }

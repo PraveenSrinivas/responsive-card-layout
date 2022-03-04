@@ -1,4 +1,12 @@
 <div class="page-container">
+  <div>
+    <label>
+      Enter the size of the data to be displyed :
+      <input name="size" placeholder="size"  [(ngModel)]="size"/>
+    </label>
+    <button (click)="loadData()">Load Data</button>
+  </div>
+  <br />
   <div class="card-container">
     <div class="card" *ngFor="let card of cardData">
       <img class="card-image" src="https://picsum.photos/200" />
@@ -6,7 +14,7 @@
       <div class="card-description">{{ card.description }}</div>
     </div>
   </div>
-  <br>
+  <br />
   <table class="table-container">
     <thead class="table-head">
       <tr>
